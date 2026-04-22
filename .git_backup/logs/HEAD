@@ -1,0 +1,18 @@
+0000000000000000000000000000000000000000 d6da4789ebf923f1288f84461623f1ec05ff5efc Александр Юклашов <Yuklashov@MacBook-Air-Aleks.local> 1776788938 +0300	commit (initial): Initial commit: HW 7.3 Yandex Cloud
+d6da4789ebf923f1288f84461623f1ec05ff5efc 0000000000000000000000000000000000000000 Александр Юклашов <Yuklashov@MacBook-Air-Aleks.local> 1776788943 +0300	Branch: renamed refs/heads/main to refs/heads/main
+d6da4789ebf923f1288f84461623f1ec05ff5efc d6da4789ebf923f1288f84461623f1ec05ff5efc Александр Юклашов <Yuklashov@MacBook-Air-Aleks.local> 1776788943 +0300	Branch: renamed refs/heads/main to refs/heads/main
+d6da4789ebf923f1288f84461623f1ec05ff5efc d7a03ee7b4619e41ac0f6f2fbbdafa9eaf87a32c Александр Юклашов <Yuklashov@MacBook-Air-Aleks.local> 1776798755 +0300	commit: Update Ansible output screenshot
+d7a03ee7b4619e41ac0f6f2fbbdafa9eaf87a32c 55812b05538cb180f8545b8778a99dbef51e4c4d Yuklashov <yuklashov@gmail.com> 1776799541 +0300	commit: First commit
+55812b05538cb180f8545b8778a99dbef51e4c4d 5a88b1929380061b078678355e60b4cf3f60628d Yuklashov <yuklashov@gmail.com> 1776799557 +0300	commit: Add .gitignore
+5a88b1929380061b078678355e60b4cf3f60628d 5a88b1929380061b078678355e60b4cf3f60628d Yuklashov <yuklashov@gmail.com> 1776799572 +0300	checkout: moving from main to dev
+5a88b1929380061b078678355e60b4cf3f60628d fd8650ce2c3edba5461d244e4028ac527e97cdb2 Yuklashov <yuklashov@gmail.com> 1776799572 +0300	commit: Add test.sh part 1
+fd8650ce2c3edba5461d244e4028ac527e97cdb2 280c4b07b66f28e6ac57c7b3d9fcd7e9f280efe4 Yuklashov <yuklashov@gmail.com> 1776799573 +0300	commit: Add test.sh part 2
+280c4b07b66f28e6ac57c7b3d9fcd7e9f280efe4 5a88b1929380061b078678355e60b4cf3f60628d Yuklashov <yuklashov@gmail.com> 1776799575 +0300	checkout: moving from dev to main
+5a88b1929380061b078678355e60b4cf3f60628d 76bc8d4262c16865d7502e9e8227a034f3ce194c Yuklashov <yuklashov@gmail.com> 1776799575 +0300	commit: Add main.sh
+76bc8d4262c16865d7502e9e8227a034f3ce194c 02dda174fba8ed1d4a341899048394553b708d12 Yuklashov <yuklashov@gmail.com> 1776799576 +0300	merge dev: Merge made by the 'ort' strategy.
+02dda174fba8ed1d4a341899048394553b708d12 02dda174fba8ed1d4a341899048394553b708d12 Yuklashov <yuklashov@gmail.com> 1776799586 +0300	checkout: moving from main to conflict
+02dda174fba8ed1d4a341899048394553b708d12 07c96bda446f0c4f28ea95d1cc1b8f6490de66ef Yuklashov <yuklashov@gmail.com> 1776799586 +0300	commit: Change test.sh in conflict branch
+07c96bda446f0c4f28ea95d1cc1b8f6490de66ef 02dda174fba8ed1d4a341899048394553b708d12 Yuklashov <yuklashov@gmail.com> 1776799587 +0300	checkout: moving from conflict to main
+02dda174fba8ed1d4a341899048394553b708d12 6ca05c342d585cea1d10a97d3cd1b7280d7b52af Yuklashov <yuklashov@gmail.com> 1776799587 +0300	commit: Change test.sh in main branch
+6ca05c342d585cea1d10a97d3cd1b7280d7b52af 99df5b6cfa96183a22588d00b09cdd9fba64bb97 Yuklashov <yuklashov@gmail.com> 1776799598 +0300	commit (merge): Merge conflict and resolve keeping conflict branch version
+99df5b6cfa96183a22588d00b09cdd9fba64bb97 b1637e6871ad78a1b2912e906ada7cf17fad93a3 Yuklashov <yuklashov@gmail.com> 1776799612 +0300	commit: Update README.md with answers

@@ -1,0 +1,1 @@
+echo 'conflict 1'

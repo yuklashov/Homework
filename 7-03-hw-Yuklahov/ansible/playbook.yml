@@ -1,0 +1,21 @@
+---
+- name: Install and configure Nginx
+  hosts: webservers
+  become: yes
+  gather_facts: yes # Re-enable fact gathering
+  tasks:
+    - name: Disable UFW
+      ansible.builtin.command: ufw disable
+      ignore_errors: true
+
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: latest
+        update_cache: yes
+
+    - name: Start and enable Nginx service
+      systemd:
+        name: nginx
+        state: started
+        enabled: yes
