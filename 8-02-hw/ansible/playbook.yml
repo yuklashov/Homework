@@ -1,0 +1,106 @@
+---
+- name: Setup Jenkins
+  hosts: jenkins
+  become: yes
+  tasks:
+    - name: Install Java and Go
+      apt:
+        name: 
+          - openjdk-17-jre
+          - golang
+          - wget
+          - curl
+          - git
+        update_cache: yes
+        state: present
+
+    - name: Download Jenkins key
+      shell: curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+
+    - name: Clean up old repo file
+      file:
+        path: /etc/apt/sources.list.d/jenkins.list
+        state: absent
+
+    - name: Add Jenkins repo
+      shell: echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/ | tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+    - name: Install Jenkins
+      apt:
+        name: jenkins
+        state: present
+        update_cache: yes
+
+    - name: Start Jenkins
+      systemd:
+        name: jenkins
+        state: started
+        enabled: yes
+
+- name: Setup Nexus
+  hosts: nexus
+  become: yes
+  tasks:
+    - name: Install Java
+      apt:
+        name: openjdk-8-jre-headless
+        update_cache: yes
+        state: present
+        
+    - name: Download Nexus
+      unarchive:
+        src: https://download.sonatype.com/nexus/3/latest-unix.tar.gz
+        dest: /opt/
+        remote_src: yes
+        
+    - name: Find nexus folder
+      find:
+        paths: /opt/
+        patterns: "nexus-*"
+        file_type: directory
+      register: nexus_dir
+
+    - name: Add nexus user
+      user:
+        name: nexus
+
+    - name: Change ownership
+      file:
+        path: /opt/
+        owner: nexus
+        group: nexus
+        recurse: yes
+
+    - name: Modify nexus.rc
+      lineinfile:
+        path: "{{ nexus_dir.files[0].path }}/bin/nexus.rc"
+        line: 'run_as_user="nexus"'
+        create: yes
+
+    - name: Create systemd service
+      copy:
+        dest: /etc/systemd/system/nexus.service
+        content: |
+          [Unit]
+          Description=nexus service
+          After=network.target
+
+          [Service]
+          Type=forking
+          LimitNOFILE=65536
+          User=nexus
+          Group=nexus
+          ExecStart={{ nexus_dir.files[0].path }}/bin/nexus start
+          ExecStop={{ nexus_dir.files[0].path }}/bin/nexus stop
+          User=nexus
+          Restart=on-abort
+
+          [Install]
+          WantedBy=multi-user.target
+
+    - name: Start Nexus
+      systemd:
+        name: nexus
+        state: started
+        enabled: yes
+        daemon_reload: yes
