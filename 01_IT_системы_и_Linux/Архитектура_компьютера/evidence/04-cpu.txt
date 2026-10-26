@@ -1,0 +1,2 @@
+$ sysctl -n machdep.cpu.brand_string
+Apple M1
