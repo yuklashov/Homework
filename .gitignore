@@ -1,2 +1,16 @@
 .terraform/
 .DS_Store
+
+# Local infrastructure and private runtime data
+.terraform/
+.git_backup/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.auto.tfvars
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
