@@ -1,2 +1,9 @@
 .terraform/
 .DS_Store
+
+# Локальные служебные данные
+.git_backup/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.auto.tfvars
