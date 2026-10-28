@@ -1,0 +1,58 @@
+{
+  "checked_on": "2026-10-27",
+  "scope": "Local Mac syntax-check and synthetic-facts rendering only; no SSH, VM or Linux changes",
+  "ansible": "ansible-playbook [core 2.20.4]",
+  "syntax_checks": [
+    {
+      "file": "1_kafka.yml",
+      "exit_code": 0,
+      "stdout": "playbook: 1_kafka.yml",
+      "stderr": ""
+    },
+    {
+      "file": "2_tuned.yml",
+      "exit_code": 0,
+      "stdout": "playbook: 2_tuned.yml",
+      "stderr": ""
+    },
+    {
+      "file": "3_motd.yml",
+      "exit_code": 0,
+      "stdout": "playbook: 3_motd.yml",
+      "stderr": ""
+    },
+    {
+      "file": "4_motd_v2.yml",
+      "exit_code": 0,
+      "stdout": "playbook: 4_motd_v2.yml",
+      "stderr": ""
+    },
+    {
+      "file": "5_run_apache.yml",
+      "exit_code": 0,
+      "stdout": "playbook: 5_run_apache.yml",
+      "stderr": ""
+    }
+  ],
+  "yaml_files": 9,
+  "jinja_cases": [
+    {
+      "device": "sda",
+      "rendered": true
+    },
+    {
+      "device": "vda",
+      "rendered": true
+    },
+    {
+      "device": "nvme0n1",
+      "rendered": true
+    },
+    {
+      "device": null,
+      "rendered": true
+    }
+  ],
+  "restart_notify_only_from_config": true,
+  "forbidden_shell_command_modules_absent": true
+}

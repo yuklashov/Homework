@@ -1,0 +1,51 @@
+[
+  {
+    "file": "apache-page-2026-03.png",
+    "source_docx": "Ansible.Часть 2 - Юклашов А.docx",
+    "source_entry": "word/media/image1.png",
+    "sha256": "4f1ecf8a09e3693af7993636a091f9bcc0619ad8d985140752a9c64a818a4cd6",
+    "kind": "historical March 2026 screenshot; not an October rerun"
+  },
+  {
+    "file": "apache-repeat-2026-03.png",
+    "source_docx": "Ansible.Часть 2 - Юклашов А.docx",
+    "source_entry": "word/media/image2.png",
+    "sha256": "8959a4b7a275dbb3afb629f95b09af2e3097ff12caad275128fe1245232f3fb0",
+    "kind": "historical March 2026 screenshot; not an October rerun"
+  },
+  {
+    "file": "tuned-2026-03-a.png",
+    "source_docx": "Ansible.Часть 2 - Юклашов А.docx",
+    "source_entry": "word/media/image3.png",
+    "sha256": "77e302735490b4a11d679ee900a8b0e9b058085d3f72cd33237754e0c972d925",
+    "kind": "historical March 2026 screenshot; not an October rerun"
+  },
+  {
+    "file": "tuned-2026-03-b.png",
+    "source_docx": "Ansible.Часть 2 - Юклашов А.docx",
+    "source_entry": "word/media/image4.png",
+    "sha256": "b460ca82b0b9b2c15ed52f81e0e027750b05de092bc6477a327c640ceaa176a2",
+    "kind": "historical March 2026 screenshot; not an October rerun"
+  },
+  {
+    "file": "motd-facts-2026-03.png",
+    "source_docx": "Ansible.Часть 2 - Юклашов А.docx",
+    "source_entry": "word/media/image5.png",
+    "sha256": "1af0b0d3a5c70a3f9e247643517421ebce0c3ae93e707670dff18483fa3e55f8",
+    "kind": "historical March 2026 screenshot; not an October rerun"
+  },
+  {
+    "file": "motd-source-2026-03.png",
+    "source_docx": "Ansible.Часть 2 - Юклашов А.docx",
+    "source_entry": "word/media/image6.png",
+    "sha256": "d0a0f6bd8695a94cedeb0faae7cf2698fc8df56f781c36d34734e166be7db14d",
+    "kind": "historical March 2026 screenshot; not an October rerun"
+  },
+  {
+    "file": "motd-run-2026-03.png",
+    "source_docx": "Ansible.Часть 2 - Юклашов А.docx",
+    "source_entry": "word/media/image7.png",
+    "sha256": "003c9cfc08690f2ab52947137764e411595503a14025d27c932a0bf48282a688",
+    "kind": "historical March 2026 screenshot; not an October rerun"
+  }
+]

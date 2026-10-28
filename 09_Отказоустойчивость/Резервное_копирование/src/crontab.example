@@ -1,0 +1,4 @@
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Пользовательский crontab, без поля пользователя; каждый день в 04:00.
+0 4 * * * /bin/bash /home/student/bin/home-backup.sh

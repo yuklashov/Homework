@@ -1,0 +1,26 @@
+{
+  "kind": "спецификация формы, не API",
+  "name": "Задание 4",
+  "widgets": [
+    {
+      "type": "Graph classic",
+      "host": "yuklashovam-1",
+      "graph": "CPU usage, %"
+    },
+    {
+      "type": "Graph classic",
+      "host": "yuklashovam-1",
+      "graph": "RAM usage, %"
+    },
+    {
+      "type": "Graph classic",
+      "host": "yuklashovam-2",
+      "graph": "CPU usage, %"
+    },
+    {
+      "type": "Graph classic",
+      "host": "yuklashovam-2",
+      "graph": "RAM usage, %"
+    }
+  ]
+}

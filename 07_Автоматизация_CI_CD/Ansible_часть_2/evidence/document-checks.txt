@@ -1,0 +1,8 @@
+Document checks by Codex, 2026-10-27.
+Original DOCX, original archive and Homework Git index unchanged.
+7 original screenshots match SHA256 manifest.
+All local Markdown links resolve.
+Bash reference syntax passes.
+Reviewed archive exactly matches current role source; no links/traversal members.
+JSON artifacts valid; queue 1 of 14 completed.
+No deployment, VM, submission or Git publication performed.

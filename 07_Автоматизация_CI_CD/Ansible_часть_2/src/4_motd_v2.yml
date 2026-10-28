@@ -1,0 +1,18 @@
+---
+- name: Change system MOTD with Ansible facts
+  hosts: lab
+  become: true
+  gather_facts: true
+  vars:
+    custom_greeting: >-
+      Привет, системный администратор! Желаю отличного дня.
+      Вы вошли на сервер {{ ansible_facts['hostname'] }}
+      с IP-адресом {{ ansible_facts.get('default_ipv4', {}).get('address', 'IP не определён') }}.
+  tasks:
+    - name: Update MOTD file with dynamic variables
+      ansible.builtin.copy:
+        content: "{{ custom_greeting }}\n"
+        dest: /etc/motd
+        owner: root
+        group: root
+        mode: '0644'

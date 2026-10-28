@@ -1,0 +1,3 @@
+27 октября 2026: fmt exit0, init с локальным плагином exit0, validate exit0, JSON прочитан. VM/plan/apply/каналы/уведомления не запускались.
+Success! The configuration is valid.
+

@@ -1,0 +1,14 @@
+{
+  "mode": "реальные временные файлы Mac + rsync; logger является тестовой заменой",
+  "checks": {
+    "hidden_directories_excluded": true,
+    "dotfile_kept": true,
+    "same_size_mtime_change_detected": true,
+    "obsolete_deleted": true,
+    "daily_full_includes_hidden": true,
+    "success_and_failure_logged_to_model": true,
+    "overlapping_paths_refused": true
+  },
+  "cron_installed": false,
+  "linux_syslog_verified": false
+}

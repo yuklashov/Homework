@@ -1,0 +1,20 @@
+---
+- name: Install and configure tuned daemon
+  hosts: lab
+  become: true
+  tasks:
+    - name: Check supported operating system
+      ansible.builtin.assert:
+        that: ansible_facts['os_family'] == 'Debian'
+        fail_msg: This example targets Debian or Ubuntu with systemd.
+    - name: Install tuned package
+      ansible.builtin.apt:
+        name: tuned
+        state: present
+        update_cache: true
+        cache_valid_time: 3600
+    - name: Enable and start tuned service
+      ansible.builtin.systemd_service:
+        name: tuned
+        state: started
+        enabled: true

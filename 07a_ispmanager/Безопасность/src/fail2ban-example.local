@@ -1,0 +1,33 @@
+# Пример для Debian с файловыми логами почты/FTP и journald для SSH.
+# Имена фильтров/пути сверить с установленным пакетом и панелью.
+[DEFAULT]
+maxretry = 3
+bantime = 36000
+findtime = 600
+ignoreip = 127.0.0.1/8 ::1 192.0.2.10/32
+
+[sshd]
+enabled = true
+port = 2222
+backend = systemd
+
+[exim]
+enabled = true
+port = smtp,ssmtp,submission
+filter = exim
+logpath = /var/log/exim4/mainlog
+backend = polling
+
+[dovecot]
+enabled = true
+port = pop3,pop3s,imap,imaps,submission,submissions
+filter = dovecot
+logpath = /var/log/mail.log
+backend = polling
+
+[pure-ftpd]
+enabled = true
+port = ftp,ftp-data,ftps,ftps-data
+filter = pure-ftpd
+logpath = /var/log/syslog
+backend = polling

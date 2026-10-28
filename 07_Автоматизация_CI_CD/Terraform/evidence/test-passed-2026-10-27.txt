@@ -1,0 +1,74 @@
+Browser tab: 1, Title: "Тест: Тест по занятию Terraform", URL: "https://netology.ru/profile/program/cicd-62/lessons/656568/lesson_items/3523473".
+1 AXWebArea Тест: Тест по занятию Terraform, URL: netology.ru/profile/program/cicd-62/lessons/656568/lesson_items/3523473
+	2 container
+		3 container app
+			4 container
+				5 container
+					6 link netology.ru/
+					7 container Breadcrumb
+						8 content list
+							9 link netology.ru/profile/6094030
+							10 container
+								26 text / Модули курса Системный администратор
+								12 link Description: Модули курса Системный администратор, Value: netology.ru/profile/program/sys-62/schedule/all
+							13 container
+								27 text / Автоматизация и CI/СD
+								15 link Description: Автоматизация и CI/СD, Value: netology.ru/profile/program/cicd-62/schedule
+							16 container
+								28 text / Тест по занятию Terraform
+								18 link Description: Тест по занятию Terraform, Value: netology.ru/profile/program/cicd-62/lessons/656568/lesson_items/3523473
+					19 link Description: Моё обучение, Value: netology.ru/profile/6094030
+					20 link netology.ru/favorites
+					21 text АЮ
+				22 container
+					23 text Расписание
+					29 text Практика
+					30 text Лекции
+					31 container
+						32 container lessonsScrollbar
+							33 text Автоматизация администрирования инфраструктуры
+							34 link Description: Как совмещать учёбу с другими делами, Value: netology.ru/profile/program/cicd-62/lessons/656568/lesson_items/3523473, ID: lesson-id-639018
+							35 link Description: Ansible, Value: netology.ru/profile/program/cicd-62/lessons/656568/lesson_items/3523473, ID: lesson-id-656566
+							36 link Description: Ansible. Часть 2, Value: netology.ru/profile/program/cicd-62/lessons/656568/lesson_items/3523473, ID: lesson-id-656567
+							37 link Description: Terraform, Value: netology.ru/profile/program/cicd-62/lessons/656568/lesson_items/3523473, ID: lesson-id-656568
+							38 link Description: Подъем инфраструктуры в облаке, Value: netology.ru/profile/program/cicd-62/lessons/656568/lesson_items/3523473, ID: lesson-id-656569
+							39 text Введение в DevOps
+							40 link Description: Git, Value: netology.ru/profile/program/cicd-62/lessons/656568/lesson_items/3523473, ID: lesson-id-656570
+							41 link Description: Что такое DevOps. CI/CD, Value: netology.ru/profile/program/cicd-62/lessons/656568/lesson_items/3523473, ID: lesson-id-656571
+							42 link Description: GitLab, Value: netology.ru/profile/program/cicd-62/lessons/656568/lesson_items/3523473, ID: lesson-id-656572
+					43 container
+						44 container lessonItemsScrollbar
+							45 container
+								46 image
+								47 text Все занятия
+							48 text Terraform
+							49 container
+								50 text Время прохождения ~  5 ч 44 мин
+							51 link Description: Terraform 1 ч 18 мин, Value: netology.ru/profile/program/cicd-62/lessons/656568/lesson_items/3523471, ID: lesson-item-id-3523471
+							52 link Description: Презентация к занятию «Terraform» 20 мин, Value: netology.ru/profile/program/cicd-62/lessons/656568/lesson_items/3523472, ID: lesson-item-id-3523472
+							53 link Description: Тест по занятию Terraform 6 мин Тест сдан, Value: netology.ru/profile/program/cicd-62/lessons/656568/lesson_items/3523473, ID: lesson-item-id-3523473
+							54 link Description: Задание по занятию "Terraform" 4 ч, Value: netology.ru/profile/program/cicd-62/lessons/656568/lesson_items/3523474, ID: lesson-item-id-3523474
+					55 container
+						56 link Description: Вебинар по теме «Ansible. Часть 2» 1 ч 50 мин 25 августа в 19:00 (мск), Value: netology.ru/profile/program/cicd-62/lessons/656567/lesson_items/3523468, ID: lesson-item-id-3523468
+					57 container
+						58 container practiceScrollbar
+							59 link Description: Практическое задание с самопроверкой «Ansible. Часть 2» 4 ч, Value: netology.ru/profile/program/cicd-62/lessons/656567/lesson_items/3523470, ID: lesson-item-id-3523470
+							60 link Description: Тест по занятию Terraform 6 мин Тест сдан, Value: netology.ru/profile/program/cicd-62/lessons/656568/lesson_items/3523473, ID: lesson-item-id-3523473
+							61 link Description: Задание по занятию "Terraform" 4 ч, Value: netology.ru/profile/program/cicd-62/lessons/656568/lesson_items/3523474, ID: lesson-item-id-3523474
+							62 link Description: Практическое задание с самопроверкой «Подъем инфраструктуры в облаке» 4 ч, Value: netology.ru/profile/program/cicd-62/lessons/656569/lesson_items/3523477, ID: lesson-item-id-3523477
+							63 link Description: Самостоятельное практическое задание по занятию "Git" 4 ч, Value: netology.ru/profile/program/cicd-62/lessons/656570/lesson_items/3523480, ID: lesson-item-id-3523480
+							64 link Description: Практическое задание с самопроверкой «Что такое DevOps. CI/CD» 4 ч, Value: netology.ru/profile/program/cicd-62/lessons/656571/lesson_items/3523483, ID: lesson-item-id-3523483
+							65 link Description: Практическое задание с самопроверкой «GitLab» 4 ч, Value: netology.ru/profile/program/cicd-62/lessons/656572/lesson_items/3523486, ID: lesson-item-id-3523486
+					24 link Description: Словарь терминов Beta Открыть, Value: netology.ru/glossariy
+				66 container
+					67 text Тест по занятию Terraform
+					68 link netology.ru/profile/program/cicd-62/lessons/656568/lesson_items/3523472
+					69 link netology.ru/profile/program/cicd-62/lessons/656568/lesson_items/3523474
+					73 text Поздравляем, вы сдали тест! 5 правильных ответов  из  5 .
+					74 text Так держать!
+					75 button Посмотреть результаты
+					76 link Value: netology.ru/profile/program/cicd-62/lessons/656567/lesson_items/3523470, Description: Рекомендуем продолжить практику Начните задание Практическое задание с самопроверкой «Ansible. Часть 2» 😉
+					72 text Поделитесь впечатлениями от задания
+			25 container Поддержка
+
+The focused UI element is 1 AXWebArea Тест: Тест по занятию Terraform, URL: netology.ru/profile/program/cicd-62/lessons/656568/lesson_items/3523473

@@ -1,0 +1,39 @@
+{
+  "kind": "учебная спецификация, не импорт ispmanager API",
+  "installation": {
+    "os": "Debian 12 x86_64 server, чистая система",
+    "branch": "stable",
+    "edition": "lite/pro/host, рекомендуемое ПО",
+    "web": "Nginx + Apache MPM-ITK",
+    "panel_db": "SQLite"
+  },
+  "accounts": [
+    {
+      "login": "superadmin",
+      "role": "administrator",
+      "superuser": true
+    },
+    {
+      "login": "admin",
+      "role": "administrator",
+      "superuser": false
+    },
+    {
+      "login": "user",
+      "role": "user",
+      "disk_mb": 2000,
+      "databases": 2,
+      "ssl": true,
+      "cgi": false,
+      "php_apache_module": true,
+      "php_cgi": false,
+      "php_nginx_fpm": false,
+      "shell": true,
+      "denied_functions": [
+        "Планировщик CRON",
+        "Управление DNS",
+        "Резервные копии"
+      ]
+    }
+  ]
+}

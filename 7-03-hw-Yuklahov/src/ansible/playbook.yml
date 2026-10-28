@@ -1,0 +1,33 @@
+---
+- name: Install Nginx on private web hosts
+  hosts: webservers
+  become: true
+  gather_facts: true
+  vars:
+    manage_ufw: false
+  tasks:
+    - name: Install Nginx
+      ansible.builtin.apt:
+        name: nginx
+        state: present
+        update_cache: true
+        cache_valid_time: 3600
+    - name: Allow HTTP if UFW is managed on this host
+      community.general.ufw:
+        rule: allow
+        port: '80'
+        proto: tcp
+      when: manage_ufw | bool
+    - name: Start Nginx
+      ansible.builtin.systemd_service:
+        name: nginx
+        state: started
+        enabled: true
+    - name: Check local HTTP
+      ansible.builtin.uri:
+        url: http://127.0.0.1/
+        status_code: 200
+      register: http_check
+      retries: 5
+      delay: 2
+      until: http_check.status | default(0) == 200

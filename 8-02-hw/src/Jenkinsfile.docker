@@ -1,0 +1,15 @@
+pipeline {
+  agent any
+  options { skipDefaultCheckout(true) }
+  stages {
+    stage('Checkout') {
+      steps { checkout scm }
+    }
+    stage('Test') {
+      steps { dir('src/app') { sh 'go test .' } }
+    }
+    stage('Docker build') {
+      steps { dir('src/app') { sh 'docker build -t "sdvps-demo:${BUILD_NUMBER}" .' } }
+    }
+  }
+}

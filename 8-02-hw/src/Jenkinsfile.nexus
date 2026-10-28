@@ -1,0 +1,43 @@
+pipeline {
+  agent any
+  options { skipDefaultCheckout(true) }
+  environment {
+    NEXUS_URL = 'https://nexus.example.test/repository/netology-raw'
+  }
+  stages {
+    stage('Checkout') {
+      steps { checkout scm }
+    }
+    stage('Test') {
+      steps { dir('src/app') { sh 'go test .' } }
+    }
+    stage('Binary build') {
+      steps {
+        dir('src/app') {
+          sh 'mkdir -p dist; CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o "dist/main-${BUILD_NUMBER}" .'
+        }
+      }
+    }
+    stage('Upload') {
+      steps {
+        withCredentials([usernamePassword(credentialsId: 'nexus-upload', usernameVariable: 'NEXUS_USER', passwordVariable: 'NEXUS_PASSWORD')]) {
+          dir('src/app') {
+            sh '''
+              set +x
+              set -eu
+              umask 077
+              auth_file=$(mktemp)
+              trap 'rm -f "$auth_file"' EXIT
+              printf 'default login %s password %s\n' "$NEXUS_USER" "$NEXUS_PASSWORD" > "$auth_file"
+              curl --fail --silent --show-error --netrc-file "$auth_file" \
+                --upload-file "dist/main-${BUILD_NUMBER}" "$NEXUS_URL/main-${BUILD_NUMBER}"
+            '''
+          }
+        }
+      }
+    }
+  }
+  post {
+    success { archiveArtifacts artifacts: 'src/app/dist/*', fingerprint: true }
+  }
+}

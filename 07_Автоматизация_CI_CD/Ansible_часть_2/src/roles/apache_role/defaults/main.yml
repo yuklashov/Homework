@@ -1,0 +1,5 @@
+---
+apache_manage_ufw: false
+# Optional explicit device name; otherwise the first non-loop disk is selected.
+apache_disk_name: ""
+apache_document_root: /var/www/html

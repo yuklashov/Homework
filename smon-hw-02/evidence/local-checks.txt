@@ -1,0 +1,1 @@
+27 октября 2026. bash -n server-reference.sh exit0; фрагменты агента просмотрены, hostname уникальны, server/active-port согласованы. Пакеты, SQL, systemctl, zabbix_get и frontend не запускались.

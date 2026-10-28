@@ -1,0 +1,1 @@
+27 октября 2026, Mac. bash -n freestyle и shell-части Jenkinsfile.nexus: exit0. 4 файла приложения совпадают с существующим форком. Go/Docker отсутствуют в PATH, не устанавливались; тесты/сборки не запускались. Jenkins/Groovy linter не выполнялся.

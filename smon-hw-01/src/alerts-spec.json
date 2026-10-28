@@ -1,0 +1,28 @@
+{
+  "kind": "учебная спецификация для формы, не запрос API",
+  "metric": "cpu_utilization",
+  "service": "compute",
+  "resource_id": "подставить выбранную VM, не все VM каталога",
+  "core_fraction": 20,
+  "aggregation": "max по ядрам и среднее по окну 5 минут",
+  "alerts": [
+    {
+      "name": "cpu-warn",
+      "comparison": ">",
+      "threshold": 15,
+      "notification_status": "WARN"
+    },
+    {
+      "name": "cpu-alarm",
+      "comparison": ">",
+      "threshold": 18,
+      "notification_status": "ALARM"
+    }
+  ],
+  "missing_data": "NO_DATA, не считать нулём/OK",
+  "channel": {
+    "type": "email",
+    "recipient": "адрес выбранного участника, не указан в отчёте",
+    "verification": "проверить подтверждение и тестовое уведомление; здесь не отправлялись"
+  }
+}

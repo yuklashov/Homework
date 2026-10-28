@@ -1,0 +1,65 @@
+---
+- name: Check supported operating system
+  ansible.builtin.assert:
+    that: ansible_facts['os_family'] == 'Debian'
+    fail_msg: This role targets Debian or Ubuntu Apache paths and systemd.
+
+- name: Install Apache web server
+  ansible.builtin.apt:
+    name: apache2
+    state: present
+    update_cache: true
+    cache_valid_time: 3600
+
+- name: Deploy Apache virtual host configuration
+  ansible.builtin.template:
+    src: 000-default.conf.j2
+    dest: /etc/apache2/sites-available/000-default.conf
+    owner: root
+    group: root
+    mode: '0644'
+  notify: Restart Apache
+
+- name: Ensure document root exists
+  ansible.builtin.file:
+    path: "{{ apache_document_root }}"
+    state: directory
+    owner: root
+    group: root
+    mode: '0755'
+
+- name: Deploy index.html with host facts
+  ansible.builtin.template:
+    src: index.html.j2
+    dest: "{{ apache_document_root }}/index.html"
+    owner: root
+    group: root
+    mode: '0644'
+  # Static HTML is served directly; it must not notify the restart handler.
+
+- name: Allow HTTP in UFW when explicitly required
+  community.general.ufw:
+    rule: allow
+    port: '80'
+    proto: tcp
+  when: apache_manage_ufw | bool
+
+- name: Enable and start Apache service
+  ansible.builtin.systemd_service:
+    name: apache2
+    state: started
+    enabled: true
+
+- name: Apply pending configuration change before HTTP check
+  ansible.builtin.meta: flush_handlers
+
+- name: Check website availability
+  ansible.builtin.uri:
+    url: http://127.0.0.1/
+    return_content: true
+    status_code: 200
+  register: apache_http_result
+  until: apache_http_result.status | default(0) == 200
+  retries: 5
+  delay: 2
+  changed_when: false

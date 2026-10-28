@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><meta charset="utf-8"><title>Server Status</title></head>
+<body>
+<h1>Панель управления SRE-инженера</h1>
+<p><strong>Hostname:</strong> {{ ansible_facts.get('hostname', 'Не определён') | e }}</p>
+<p><strong>IP-адрес:</strong> {{ ansible_facts.get('default_ipv4', {}).get('address', 'Не определён') | e }}</p>
+<p><strong>CPU:</strong> {{ ansible_facts.get('processor_vcpus', 'Не определено') | e }} ядер</p>
+<p><strong>RAM:</strong> {{ ansible_facts.get('memtotal_mb', 'Не определено') | e }} MB</p>
+{% set disks = ansible_facts.get('devices', {}) %}
+{% set selected = namespace(name=apache_disk_name) %}
+{% if not selected.name %}
+{% for name in disks | sort %}
+{% if not selected.name and not name.startswith(('loop', 'ram', 'sr', 'dm-')) %}
+{% set selected.name = name %}
+{% endif %}
+{% endfor %}
+{% endif %}
+<p><strong>Первый диск ({{ selected.name | default('нет', true) | e }}):</strong> {{ disks.get(selected.name, {}).get('size', 'Не определён') | e }}</p>
+</body></html>

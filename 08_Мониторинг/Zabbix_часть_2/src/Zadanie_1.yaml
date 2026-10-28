@@ -1,0 +1,53 @@
+zabbix_export:
+  version: '7.4'
+  template_groups:
+  - uuid: 03c4575d22f3e8bd306603a5ec3a763e
+    name: Templates/Custom
+  templates:
+  - uuid: 3548467acd9a281ab54ac39e912ea2b5
+    template: Zadanie_1
+    name: Задание 1
+    groups:
+    - name: Templates/Custom
+    items:
+    - uuid: c4864c52ecf5a7e84e3d3b3fa591b35f
+      name: CPU usage, %
+      key: system.cpu.util[,idle]
+      delay: 30s
+      value_type: FLOAT
+      units: '%'
+      preprocessing:
+      - type: JAVASCRIPT
+        parameters:
+        - return 100 - Number(value);
+    - uuid: ce5aa08d3e8d77e9f31ad2fe727e037e
+      name: RAM usage, %
+      key: vm.memory.size[pavailable]
+      delay: 30s
+      value_type: FLOAT
+      units: '%'
+      preprocessing:
+      - type: JAVASCRIPT
+        parameters:
+        - return 100 - Number(value);
+  graphs:
+  - uuid: fc80fd0a3b1a5e9297ac770453117236
+    name: CPU usage, %
+    ymin_type_1: FIXED
+    ymax_type_1: FIXED
+    yaxismax: '100'
+    graph_items:
+    - color: 199C0D
+      item:
+        host: Zadanie_1
+        key: system.cpu.util[,idle]
+  - uuid: fe1f2ab511b663699cbcbe827316077f
+    name: RAM usage, %
+    ymin_type_1: FIXED
+    ymax_type_1: FIXED
+    yaxismax: '100'
+    graph_items:
+    - color: F63100
+      item:
+        host: Zadanie_1
+        key: vm.memory.size[pavailable]

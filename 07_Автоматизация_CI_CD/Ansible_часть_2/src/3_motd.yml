@@ -1,0 +1,15 @@
+---
+- name: Change system MOTD using a variable
+  hosts: lab
+  become: true
+  gather_facts: false
+  vars:
+    custom_greeting: "Добро пожаловать! Система под контролем Ansible."
+  tasks:
+    - name: Update MOTD file with variable
+      ansible.builtin.copy:
+        content: "{{ custom_greeting }}\n"
+        dest: /etc/motd
+        owner: root
+        group: root
+        mode: '0644'

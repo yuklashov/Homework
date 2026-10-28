@@ -1,0 +1,37 @@
+{
+  "mode": "учебная модель, не импорт в панель",
+  "operator_example": "192.0.2.10",
+  "ordered_rules": [
+    {
+      "source": "192.0.2.10",
+      "protocol": "any",
+      "port": "any",
+      "action": "allow"
+    },
+    {
+      "source": "9.10.11.12",
+      "protocol": "any",
+      "port": "any",
+      "action": "deny"
+    },
+    {
+      "source": "8.8.1.1",
+      "protocol": "tcp",
+      "port": 143,
+      "action": "deny"
+    },
+    {
+      "source": "15.15.4.5",
+      "protocol": "udp",
+      "port": 80,
+      "action": "allow"
+    },
+    {
+      "source": "any",
+      "protocol": "udp",
+      "port": 80,
+      "action": "deny"
+    }
+  ],
+  "other_traffic": "outside_this_exercise"
+}

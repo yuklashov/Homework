@@ -1,0 +1,6 @@
+LogFile=/var/log/zabbix/zabbix_agentd.log
+Server=192.0.2.10
+ServerActive=192.0.2.10:10051
+Hostname=linux-host2
+ListenPort=10050
+# Адрес 192.0.2.10 — учебный. Для реальной сети заменить частным IP сервера.

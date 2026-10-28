@@ -1,0 +1,21 @@
+27 октября 2026. Прочитана сохранённая история, новых коммитов нет.
+* b1637e6 99df5b6 Update README.md with answers
+*   99df5b6 6ca05c3 07c96bd Merge conflict and resolve keeping conflict branch version
+|\  
+| * 07c96bd 02dda17 Change test.sh in conflict branch
+* | 6ca05c3 02dda17 Change test.sh in main branch
+|/  
+*   02dda17 76bc8d4 280c4b0 Merge branch dev into main
+|\  
+| * 280c4b0 fd8650c Add test.sh part 2
+| * fd8650c 5a88b19 Add test.sh part 1
+* | 76bc8d4 5a88b19 Add main.sh
+|/  
+* 5a88b19 55812b0 Add .gitignore
+* 55812b0 d7a03ee First commit
+* d7a03ee d6da478 Update Ansible output screenshot
+* d6da478  Initial commit: HW 7.3 Yandex Cloud
+
+Содержимое test.sh после merge совпадает с conflict: echo 'conflict 1'
+
+GitHub API: коммиты 55812b0 и 5a88b19 существуют; ветки conflict/dev/main/study/sys-62-restart присутствуют.

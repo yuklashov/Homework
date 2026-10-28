@@ -1,0 +1,4 @@
+Server=192.0.2.10
+ServerActive=192.0.2.10:10051
+Hostname=yuklashovam-2
+# Адреса учебные, не действующий стенд.
